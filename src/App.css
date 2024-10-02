@@ -41,6 +41,16 @@
   color: #888;
 }
 
+.totalPrice {
+  position: fixed;
+  min-width: 150px;
+  padding: 1rem 0.5rem;
+  border: 1px solid #ccc;
+  background: white;
+  top: 20px;
+  right: 0;
+}
+
 .loading {
   display: flex;
   justify-content: center;
@@ -56,4 +66,14 @@
 .container {
   border: 1px solid #ccc;
   height: 800px;
+}
+
+.topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem 0.8rem;
+  border: 1px solid #222;
+  background: white;
+  cursor: pointer;
 }
