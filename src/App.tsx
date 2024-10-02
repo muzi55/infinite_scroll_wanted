@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import type { MockData, IGetProducts } from "./type";
 import axios from "axios";
+import Item from "./components/Item";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -20,7 +21,11 @@ function App() {
     <>
       <h1>무한 스크롤 구현</h1>
 
-      <ul className="container"></ul>
+      <ul className="container">
+        {data.map((el, idx) => {
+          return <Item key={el.productId} index={idx} {...el} />;
+        })}
+      </ul>
     </>
   );
 }
